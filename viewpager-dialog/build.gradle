@@ -17,18 +17,18 @@ apply plugin: 'kotlin-android'
 
 ext {
 	bintrayRepo = 'maven'
-	bintrayName = 'simple-storage'
+	bintrayName = 'viewpager-dialog'
 
 	publishedGroupId = 'org.neidhardt'
-	libraryName = 'simple-storage'
-	artifact = 'simple-storage'
+	libraryName = 'viewpager-dialog'
+	artifact = 'viewpager-dialog'
 
-	libraryDescription = 'simple android library to store data'
+	libraryDescription = 'standard dialog with viewpager'
 
 	siteUrl = 'https://github.com/CombatMage/viewpager-dialog'
 	gitUrl = 'https://github.com/CombatMage/viewpager-dialog.git'
 
-	libraryVersion = '1.0.1'
+	libraryVersion = '1.0.2'
 
 	developerId = 'combatmage'
 	developerName = 'Eric Neidhardt'
