@@ -28,7 +28,7 @@ ext {
 	siteUrl = 'https://github.com/CombatMage/viewpager-dialog'
 	gitUrl = 'https://github.com/CombatMage/viewpager-dialog.git'
 
-	libraryVersion = '1.0.2'
+	libraryVersion = '1.0.3'
 
 	developerId = 'combatmage'
 	developerName = 'Eric Neidhardt'
@@ -64,7 +64,6 @@ dependencies {
 	compile fileTree(dir: 'libs', include: ['*.jar'])
 
 	compile rootProject.ext.libraries.kotlin
-	compile rootProject.ext.libraries.supportAppCompat
 
 	//android support libs
 	compile rootProject.ext.libraries.supportV4

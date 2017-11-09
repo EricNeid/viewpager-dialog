@@ -10,10 +10,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import org.neidhardt.viewpagerdialog.R
 
-@Suppress("unused")
 /**
  * Created by eric.neidhardt@gmail.com on 08.09.2017.
  */
+@Suppress("unused")
 class ViewPagerDialogBuilder(context: Context) : AlertDialog.Builder(context) {
 
 	private var viewPager: ViewPager? = null

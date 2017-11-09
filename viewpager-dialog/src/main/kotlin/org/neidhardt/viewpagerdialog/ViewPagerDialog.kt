@@ -1,12 +1,14 @@
-package org.neidhardt.viewpagerdialog.viewhelper
+package org.neidhardt.viewpagerdialog
 
 import android.app.Dialog
 import android.os.Bundle
 import android.support.v4.app.DialogFragment
+import org.neidhardt.viewpagerdialog.viewhelper.ViewPagerDialogBuilder
 
 /**
  * Created by eric.neidhardt@gmail.com on 08.09.2017.
  */
+@Suppress("unused")
 open class ViewPagerDialog : DialogFragment() {
 
 	private val KEY_TITLE = "KEY_TITLE"
