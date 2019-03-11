@@ -1,13 +1,5 @@
-buildscript {
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-		classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
-	}
-}
 
+// javadoc currently breaks with kotlin files and bintray
 tasks.withType(Javadoc) {
 	enabled = false
 }
@@ -28,15 +20,15 @@ ext {
 	siteUrl = 'https://github.com/CombatMage/viewpager-dialog'
 	gitUrl = 'https://github.com/CombatMage/viewpager-dialog.git'
 
-	libraryVersion = '1.0.3'
+	libraryVersion = '1.1.0'
 
 	developerId = 'combatmage'
 	developerName = 'Eric Neidhardt'
 	developerEmail = 'eric.neidhardt@gmail.com'
 
-	licenseName = 'The Apache Software License, Version 2.0'
-	licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-	allLicenses = ["Apache-2.0"]
+	licenseName = 'MIT license'
+	licenseUrl = 'https://opensource.org/licenses/MIT'
+	allLicenses = ["MIT license"]
 }
 
 android {
@@ -61,28 +53,23 @@ android {
 }
 
 dependencies {
-	compile fileTree(dir: 'libs', include: ['*.jar'])
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-	compile rootProject.ext.libraries.kotlin
+	implementation rootProject.ext.libraries.kotlin
 
 	//android support libs
-	compile rootProject.ext.libraries.supportV4
-	compile rootProject.ext.libraries.supportV13
-	compile rootProject.ext.libraries.supportRecyclerView
-	compile rootProject.ext.libraries.supportAppCompat
-	compile rootProject.ext.libraries.supportDesign
-
-	//RxAndroid
-	compile rootProject.ext.libraries.rxAndroid
-	compile rootProject.ext.libraries.rxKotlin
-	compile rootProject.ext.libraries.rxJava
+	implementation rootProject.ext.libraries.supportV4
+	implementation rootProject.ext.libraries.supportV13
+	implementation rootProject.ext.libraries.supportRecyclerView
+	implementation rootProject.ext.libraries.supportAppCompat
+	implementation rootProject.ext.libraries.supportDesign
 
 	//Testing
-	testCompile rootProject.ext.libraries.junit
-	testCompile rootProject.ext.libraries.mockito
-	testCompile rootProject.ext.libraries.robolectric
-	testCompile rootProject.ext.libraries.robolectricMultidex
-	testCompile rootProject.ext.libraries.robolectricSupportV4
+	testImplementation rootProject.ext.libraries.junit
+	testImplementation rootProject.ext.libraries.mockito
+	testImplementation rootProject.ext.libraries.robolectric
+	testImplementation rootProject.ext.libraries.robolectricMultidex
+	testImplementation rootProject.ext.libraries.robolectricSupportV4
 }
 
 
@@ -170,6 +157,40 @@ Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
 bintray {
+	pom {
+		project {
+			packaging 'aar'
+			groupId publishedGroupId
+			artifactId artifact
+
+			// Add your description here
+			name libraryName
+			description libraryDescription
+			url siteUrl
+
+			// Set your license
+			licenses {
+				license {
+					name licenseName
+					url licenseUrl
+				}
+			}
+			developers {
+				developer {
+					id developerId
+					name developerName
+					email developerEmail
+				}
+			}
+			scm {
+				connection gitUrl
+				developerConnection gitUrl
+				url siteUrl
+
+			}
+		}
+	}.writeTo("$buildDir/poms/pom-default.xml")
+
 	user = properties.getProperty("bintray.user")
 	key = properties.getProperty("bintray.apikey")
 
