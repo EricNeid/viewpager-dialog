@@ -4,3 +4,5 @@ build/
 local.properties
 gradle.properties
 *.iml
+.settings/org.eclipse.buildship.core.prefs
+.project
