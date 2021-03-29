@@ -1,34 +1,28 @@
-apply plugin: 'com.github.ben-manes.versions'
-
 buildscript {
 	ext.kotlin_version = '1.3.21'
 	repositories {
 		google()
 		jcenter()
+		mavenCentral()
 	}
 	dependencies {
-		classpath 'com.android.tools.build:gradle:3.3.2'
-		classpath 'com.github.ben-manes:gradle-versions-plugin:0.21.0'
+		classpath 'com.android.tools.build:gradle:4.0.1'
 
-		// kotlin
 		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 		classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
 
-		// for publishing to bintray
-		classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
-		classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+		classpath 'com.vanniktech:gradle-maven-publish-plugin:0.13.0'
+		classpath 'org.jetbrains.dokka:dokka-gradle-plugin:1.4.30'
 	}
 }
 
 ext {
 	compileSdkVersion = 25
-	buildToolsVersion = '28.0.3'
+	buildToolsVersion = '29.0.2'
 }
 
 project.ext.set("projectMinSdkVersion", 21)
 project.ext.set("projectTargetSdkVersion", 25)
-
-apply from: 'dependencies.gradle'
 
 allprojects {
 	repositories {

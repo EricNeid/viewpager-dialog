@@ -1,10 +1,10 @@
 # viewpager-dialog
 
-Helper to construct a standard Android dialog, containing a viewager to display a list of messages.
+Helper to construct a standard Android dialog, containing a viewpager to display a list of messages.
 
 **Gradle**
 
-compile 'org.neidhardt:viewpager-dialog:1.0.3'
+implementation 'com.github.ericneid:viewpager-dialog:1.1.0'
 
 **Usage**
 ```kotlin

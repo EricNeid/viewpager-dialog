@@ -1,35 +1,11 @@
-
-// javadoc currently breaks with kotlin files and bintray
-tasks.withType(Javadoc) {
-	enabled = false
-}
+def groupId = 'com.github.ericneid'
+def libraryName = 'viewpager-dialog'
+def libraryVersion = '1.1.0'
 
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-
-ext {
-	bintrayRepo = 'maven'
-	bintrayName = 'viewpager-dialog'
-
-	publishedGroupId = 'org.neidhardt'
-	libraryName = 'viewpager-dialog'
-	artifact = 'viewpager-dialog'
-
-	libraryDescription = 'standard dialog with viewpager'
-
-	siteUrl = 'https://github.com/CombatMage/viewpager-dialog'
-	gitUrl = 'https://github.com/CombatMage/viewpager-dialog.git'
-
-	libraryVersion = '1.1.0'
-
-	developerId = 'combatmage'
-	developerName = 'Eric Neidhardt'
-	developerEmail = 'eric.neidhardt@gmail.com'
-
-	licenseName = 'MIT license'
-	licenseUrl = 'https://opensource.org/licenses/MIT'
-	allLicenses = ["MIT license"]
-}
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.vanniktech.maven.publish'
 
 android {
 	compileSdkVersion rootProject.ext.compileSdkVersion
@@ -52,165 +28,32 @@ android {
 	}
 }
 
+group = groupId
+version = libraryVersion
+archivesBaseName = libraryName
+
+def supportLibVersion = '25.0.0'
 dependencies {
 	implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-	implementation rootProject.ext.libraries.kotlin
+	implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
 	//android support libs
-	implementation rootProject.ext.libraries.supportV4
-	implementation rootProject.ext.libraries.supportV13
-	implementation rootProject.ext.libraries.supportRecyclerView
-	implementation rootProject.ext.libraries.supportAppCompat
-	implementation rootProject.ext.libraries.supportDesign
+	implementation "com.android.support:support-v4:$supportLibVersion"
+	implementation "com.android.support:support-v13:$supportLibVersion"
+	implementation "com.android.support:recyclerview-v7:$supportLibVersion"
+	implementation "com.android.support:appcompat-v7:$supportLibVersion"
+	implementation "com.android.support:design:$supportLibVersion"
 
 	//Testing
-	testImplementation rootProject.ext.libraries.junit
-	testImplementation rootProject.ext.libraries.mockito
-	testImplementation rootProject.ext.libraries.robolectric
-	testImplementation rootProject.ext.libraries.robolectricMultidex
-	testImplementation rootProject.ext.libraries.robolectricSupportV4
+	testImplementation 'junit:junit:4.12'
+	testImplementation 'org.mockito:mockito-core:2.8.47'
+	testImplementation 'org.robolectric:robolectric:3.3.2'
+	testImplementation 'org.robolectric:shadows-multidex:3.3.2'
+	testImplementation 'org.robolectric:shadows-support-v4:3.3.2'
 }
 
-
-apply plugin: 'com.github.dcendents.android-maven'
-
-group = publishedGroupId // Maven Group ID for the artifact
-
-install {
-	repositories.mavenInstaller {
-		// This generates POM.xml with proper parameters
-		pom {
-			project {
-				packaging 'aar'
-				groupId publishedGroupId
-				artifactId artifact
-
-				// Add your description here
-				name libraryName
-				description libraryDescription
-				url siteUrl
-
-				// Set your license
-				licenses {
-					license {
-						name licenseName
-						url licenseUrl
-					}
-				}
-				developers {
-					developer {
-						id developerId
-						name developerName
-						email developerEmail
-					}
-				}
-				scm {
-					connection gitUrl
-					developerConnection gitUrl
-					url siteUrl
-
-				}
-			}
-		}
-	}
-}
-
-// Bintray section
-// As long as you add bintray.user and bintray.apikey to the local.properties
-// file, you shouldn't have to change anything here. The reason you
-// don't just write them here is so that they won't be publicly visible
-// in GitHub or wherever your source control is.
-
-apply plugin: 'com.jfrog.bintray'
-
-version = libraryVersion
-
-if (project.hasProperty("android")) { // Android libraries
-	task sourcesJar(type: Jar) {
-		classifier = 'sources'
-		from android.sourceSets.main.java.srcDirs
-	}
-
-	task javadoc(type: Javadoc) {
-		source = android.sourceSets.main.java.srcDirs
-		classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-	}
-} else { // Java libraries
-	task sourcesJar(type: Jar, dependsOn: classes) {
-		classifier = 'sources'
-		from sourceSets.main.allSource
-	}
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-	classifier = 'javadoc'
-	from javadoc.destinationDir
-}
-
-artifacts {
-	archives javadocJar
-	archives sourcesJar
-}
-
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
-bintray {
-	pom {
-		project {
-			packaging 'aar'
-			groupId publishedGroupId
-			artifactId artifact
-
-			// Add your description here
-			name libraryName
-			description libraryDescription
-			url siteUrl
-
-			// Set your license
-			licenses {
-				license {
-					name licenseName
-					url licenseUrl
-				}
-			}
-			developers {
-				developer {
-					id developerId
-					name developerName
-					email developerEmail
-				}
-			}
-			scm {
-				connection gitUrl
-				developerConnection gitUrl
-				url siteUrl
-
-			}
-		}
-	}.writeTo("$buildDir/poms/pom-default.xml")
-
-	user = properties.getProperty("bintray.user")
-	key = properties.getProperty("bintray.apikey")
-
-	configurations = ['archives']
-	pkg {
-		repo = bintrayRepo
-		name = bintrayName
-		desc = libraryDescription
-		websiteUrl = siteUrl
-		vcsUrl = gitUrl
-		licenses = allLicenses
-		publish = true
-		publicDownloadNumbers = true
-		version {
-			desc = libraryDescription
-			gpg {
-				// optional GPG encryption. Default is false.
-				sign = false
-				//passphrase = properties.getProperty("bintray.gpg.password")
-			}
-		}
-	}
-}
+// move publish task to ts-deploy group (making it easier to find)
+//configure(uploadArchives) {
+//	group 'mavenCentral'
+//}
