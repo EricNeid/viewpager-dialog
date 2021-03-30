@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
-## v1.1.0 - 2021-03-29
+## v1.2.0 - 2021-03-29
 ### Changed (Breaking)
 * First release to maven central
 * groupId has changed from org.neidhardt to com.github.ericneid

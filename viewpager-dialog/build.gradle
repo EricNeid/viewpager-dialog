@@ -1,11 +1,16 @@
 def groupId = 'com.github.ericneid'
 def libraryName = 'viewpager-dialog'
-def libraryVersion = '1.1.0'
+def libraryVersion = '1.2.1'
+
+ext {
+	PUBLISH_GROUP_ID = groupId
+	PUBLISH_VERSION = libraryVersion
+	PUBLISH_ARTIFACT_ID = libraryName
+}
 
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-apply plugin: 'com.vanniktech.maven.publish'
+apply from: "${rootProject.projectDir}/scripts/publish-mavencentral.gradle"
 
 android {
 	compileSdkVersion rootProject.ext.compileSdkVersion
@@ -32,10 +37,13 @@ group = groupId
 version = libraryVersion
 archivesBaseName = libraryName
 
+repositories {
+	google()
+	mavenCentral()
+}
+
 def supportLibVersion = '25.0.0'
 dependencies {
-	implementation fileTree(dir: 'libs', include: ['*.jar'])
-
 	implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
 	//android support libs
@@ -52,8 +60,3 @@ dependencies {
 	testImplementation 'org.robolectric:shadows-multidex:3.3.2'
 	testImplementation 'org.robolectric:shadows-support-v4:3.3.2'
 }
-
-// move publish task to ts-deploy group (making it easier to find)
-//configure(uploadArchives) {
-//	group 'mavenCentral'
-//}

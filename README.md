@@ -4,7 +4,7 @@ Helper to construct a standard Android dialog, containing a viewpager to display
 
 **Gradle**
 
-implementation 'com.github.ericneid:viewpager-dialog:1.1.0'
+implementation 'com.github.ericneid:viewpager-dialog:1.2.0'
 
 **Usage**
 ```kotlin
