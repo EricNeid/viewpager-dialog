@@ -1,3 +1,7 @@
+<!--
+SPDX-FileCopyrightText: 2021 Eric Neidhardt
+SPDX-License-Identifier: CC-BY-4.0
+-->
 # viewpager-dialog
 
 Helper to construct a standard Android dialog, containing a viewpager to display a list of messages.
