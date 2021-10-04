@@ -1,0 +1,291 @@
+[
+  {
+    "project": "Android AppCompat Library v7",
+    "description": "The Support Library is a static library that you can add to your Android application in order to use APIs that are either not available for older platform versions or utility APIs that aren\u0027t a part of the framework APIs. Compatible on devices running API 4 or later.",
+    "version": "25.0.0",
+    "developers": [
+      "The Android Open Source Project"
+    ],
+    "url": "http://developer.android.com/tools/extras/support-library.html",
+    "year": "2011",
+    "licenses": [
+      {
+        "license": "The Apache Software License",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "com.android.support:appcompat-v7:25.0.0"
+  },
+  {
+    "project": "Android Design Support Library",
+    "description": "The Support Library is a static library that you can add to your Android application in order to use APIs that are either not available for older platform versions or utility APIs that aren\u0027t a part of the framework APIs. Compatible on devices running API 4 or later.",
+    "version": "25.0.0",
+    "developers": [
+      "The Android Open Source Project"
+    ],
+    "url": "http://developer.android.com/tools/extras/support-library.html",
+    "year": "2015",
+    "licenses": [
+      {
+        "license": "The Apache Software License",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "com.android.support:design:25.0.0"
+  },
+  {
+    "project": "Android Support AnimatedVectorDrawable",
+    "description": "Android Support AnimatedVectorDrawable",
+    "version": "25.0.0",
+    "developers": [
+      "The Android Open Source Project"
+    ],
+    "url": "http://developer.android.com/tools/extras/support-library.html",
+    "year": "2015",
+    "licenses": [
+      {
+        "license": "The Apache Software License",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "com.android.support:animated-vector-drawable:25.0.0"
+  },
+  {
+    "project": "Android Support Library Annotations",
+    "description": "The Support Library is a static library that you can add to your Android application in order to use APIs that are either not available for older platform versions or utility APIs that aren\u0027t a part of the framework APIs.",
+    "version": "25.0.0",
+    "developers": [
+      "The Android Open Source Project"
+    ],
+    "url": "http://developer.android.com/tools/extras/support-library.html",
+    "year": "2013",
+    "licenses": [
+      {
+        "license": "The Apache Software License",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "com.android.support:support-annotations:25.0.0"
+  },
+  {
+    "project": "Android Support Library compat",
+    "description": "The Support Library is a static library that you can add to your Android application in order to use APIs that are either not available for older platform versions or utility APIs that aren\u0027t a part of the framework APIs. Compatible on devices running API 4 or later.",
+    "version": "25.0.0",
+    "developers": [
+      "The Android Open Source Project"
+    ],
+    "url": "http://developer.android.com/tools/extras/support-library.html",
+    "year": "2015",
+    "licenses": [
+      {
+        "license": "The Apache Software License",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "com.android.support:support-compat:25.0.0"
+  },
+  {
+    "project": "Android Support Library v13",
+    "description": "The Support Library is a static library that you can add to your Android application in order to use APIs that are either not available for older platform versions or utility APIs that aren\u0027t a part of the framework APIs. Compatible on devices running API 4 or later.",
+    "version": "25.0.0",
+    "developers": [
+      "The Android Open Source Project"
+    ],
+    "url": "http://developer.android.com/tools/extras/support-library.html",
+    "year": "2011",
+    "licenses": [
+      {
+        "license": "The Apache Software License",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "com.android.support:support-v13:25.0.0"
+  },
+  {
+    "project": "Android Support Library v4",
+    "description": "The Support Library is a static library that you can add to your Android application in order to use APIs that are either not available for older platform versions or utility APIs that aren\u0027t a part of the framework APIs. Compatible on devices running API 4 or later.",
+    "version": "25.0.0",
+    "developers": [
+      "The Android Open Source Project"
+    ],
+    "url": "http://developer.android.com/tools/extras/support-library.html",
+    "year": "2011",
+    "licenses": [
+      {
+        "license": "The Apache Software License",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "com.android.support:support-core-ui:25.0.0"
+  },
+  {
+    "project": "Android Support Library v4",
+    "description": "The Support Library is a static library that you can add to your Android application in order to use APIs that are either not available for older platform versions or utility APIs that aren\u0027t a part of the framework APIs. Compatible on devices running API 4 or later.",
+    "version": "25.0.0",
+    "developers": [
+      "The Android Open Source Project"
+    ],
+    "url": "http://developer.android.com/tools/extras/support-library.html",
+    "year": "2011",
+    "licenses": [
+      {
+        "license": "The Apache Software License",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "com.android.support:support-v4:25.0.0"
+  },
+  {
+    "project": "Android Support Library v4",
+    "description": "The Support Library is a static library that you can add to your Android application in order to use APIs that are either not available for older platform versions or utility APIs that aren\u0027t a part of the framework APIs. Compatible on devices running API 4 or later.",
+    "version": "25.0.0",
+    "developers": [
+      "The Android Open Source Project"
+    ],
+    "url": "http://developer.android.com/tools/extras/support-library.html",
+    "year": "2011",
+    "licenses": [
+      {
+        "license": "The Apache Software License",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "com.android.support:support-core-utils:25.0.0"
+  },
+  {
+    "project": "Android Support Library v4",
+    "description": "The Support Library is a static library that you can add to your Android application in order to use APIs that are either not available for older platform versions or utility APIs that aren\u0027t a part of the framework APIs. Compatible on devices running API 4 or later.",
+    "version": "25.0.0",
+    "developers": [
+      "The Android Open Source Project"
+    ],
+    "url": "http://developer.android.com/tools/extras/support-library.html",
+    "year": "2011",
+    "licenses": [
+      {
+        "license": "The Apache Software License",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "com.android.support:support-fragment:25.0.0"
+  },
+  {
+    "project": "Android Support Library v4",
+    "description": "The Support Library is a static library that you can add to your Android application in order to use APIs that are either not available for older platform versions or utility APIs that aren\u0027t a part of the framework APIs. Compatible on devices running API 4 or later.",
+    "version": "25.0.0",
+    "developers": [
+      "The Android Open Source Project"
+    ],
+    "url": "http://developer.android.com/tools/extras/support-library.html",
+    "year": "2011",
+    "licenses": [
+      {
+        "license": "The Apache Software License",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "com.android.support:support-media-compat:25.0.0"
+  },
+  {
+    "project": "Android Support RecyclerView v7",
+    "description": "Android Support RecyclerView v7",
+    "version": "25.0.0",
+    "developers": [
+      "The Android Open Source Project"
+    ],
+    "url": "http://developer.android.com/tools/extras/support-library.html",
+    "year": "2014",
+    "licenses": [
+      {
+        "license": "The Apache Software License",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "com.android.support:recyclerview-v7:25.0.0"
+  },
+  {
+    "project": "Android Support VectorDrawable",
+    "description": "Android Support VectorDrawable",
+    "version": "25.0.0",
+    "developers": [
+      "The Android Open Source Project"
+    ],
+    "url": "http://developer.android.com/tools/extras/support-library.html",
+    "year": "2015",
+    "licenses": [
+      {
+        "license": "The Apache Software License",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "com.android.support:support-vector-drawable:25.0.0"
+  },
+  {
+    "project": "Android Transition Support Library",
+    "description": "Android Transition Support Library",
+    "version": "25.0.0",
+    "developers": [
+      "The Android Open Source Project"
+    ],
+    "url": "http://developer.android.com/tools/extras/support-library.html",
+    "year": "2016",
+    "licenses": [
+      {
+        "license": "The Apache Software License",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "com.android.support:transition:25.0.0"
+  },
+  {
+    "project": "IntelliJ IDEA Annotations",
+    "description": "A set of annotations used for code inspection support and code documentation.",
+    "version": "13.0",
+    "developers": [
+      "JetBrains Team"
+    ],
+    "url": "http://www.jetbrains.org",
+    "year": null,
+    "licenses": [
+      {
+        "license": "The Apache Software License, Version 2.0",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "org.jetbrains:annotations:13.0"
+  },
+  {
+    "project": "Kotlin Stdlib",
+    "description": "Kotlin Standard Library for JVM",
+    "version": "1.4.30",
+    "developers": [
+      "Kotlin Team"
+    ],
+    "url": "https://kotlinlang.org/",
+    "year": null,
+    "licenses": [
+      {
+        "license": "The Apache License, Version 2.0",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "org.jetbrains.kotlin:kotlin-stdlib:1.4.30"
+  },
+  {
+    "project": "Kotlin Stdlib Common",
+    "description": "Kotlin Common Standard Library",
+    "version": "1.4.30",
+    "developers": [
+      "Kotlin Team"
+    ],
+    "url": "https://kotlinlang.org/",
+    "year": null,
+    "licenses": [
+      {
+        "license": "The Apache License, Version 2.0",
+        "license_url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "dependency": "org.jetbrains.kotlin:kotlin-stdlib-common:1.4.30"
+  }
+]
